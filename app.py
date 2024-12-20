@@ -1,4 +1,4 @@
-[import streamlit as st
+import streamlit as st
 import requests
 from bs4 import BeautifulSoup
 from urllib.parse import quote
@@ -184,4 +184,4 @@ if st.button("뉴스 검색 및 요약"):
         else:
             st.error(f"❌ '{search_keyword}' 관련 뉴스를 찾지 못했습니다.")
     else:
-        st.warning("키워드와 질문을 입력해 주세요!")]]
+        st.warning("키워드와 질문을 입력해 주세요!")
