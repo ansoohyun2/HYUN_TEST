@@ -1,4 +1,4 @@
-import streamlit as st
+[import streamlit as st
 import requests
 from bs4 import BeautifulSoup
 from urllib.parse import quote
@@ -8,7 +8,7 @@ import random  # 랜덤 선택 추가
 import re  # 숫자 추출을 위한 정규 표현식 추가
 
 # Google Gemini API 설정
-API_KEY = "AIzaSyDmaCsKCS4PrE3B-ErmHKknXEOpHQ2vjno"  # Google Generative AI 키
+API_KEY = "key"  # Google Generative AI 키
 genai.configure(api_key=API_KEY)
 
 # CSS 추가
@@ -178,10 +178,4 @@ if st.button("뉴스 검색 및 요약"):
             with st.spinner("🤖 AI가 대화 형식으로 요약 중입니다..."):
                 summary = generate_ai_summary(selected_news, user_question, search_keyword)
 
-            # 요약 결과 출력
-            st.subheader("🤖 AI 요약 결과")
-            st.write(summary)
-        else:
-            st.error(f"❌ '{search_keyword}' 관련 뉴스를 찾지 못했습니다.")
-    else:
-        st.warning("키워드와 질문을 입력해 주세요!")
+      
